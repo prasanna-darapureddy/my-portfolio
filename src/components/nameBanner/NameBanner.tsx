@@ -25,15 +25,6 @@ export default function NameBanner({ id }: Iprops) {
         </p>
         <div className="social-div">
           <a
-            href="https://www.linkedin.com/in/prasanna-darapureddy"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="icon-div">
-              <LinkedIn sx={styles.socialIcons} />
-            </div>
-          </a>
-          <a
             href="https://github.com/prasanna-darapureddy"
             target="_blank"
             rel="noreferrer"
@@ -42,6 +33,16 @@ export default function NameBanner({ id }: Iprops) {
               <GitHub sx={styles.socialIcons} />
             </div>
           </a>
+          <a
+            href="https://www.linkedin.com/in/prasanna-darapureddy"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="icon-div">
+              <LinkedIn sx={styles.socialIcons} />
+            </div>
+          </a>
+
           <a
             href="mailto:nagaprasanna18@gmail.com"
             target="_blank"

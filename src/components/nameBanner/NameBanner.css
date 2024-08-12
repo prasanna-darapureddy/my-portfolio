@@ -48,8 +48,8 @@
     background-color: #b339fa30;
   }
   .myPic{
-    border-radius: 150px;
-    border-bottom-left-radius: 10px;
+    border-radius: 50%;
+    border-bottom-left-radius: 0px;
     border: 3px dashed;
     border-image: linear-gradient(to right, darkblue, darkorchid);
     border-image-slice: 1;    
