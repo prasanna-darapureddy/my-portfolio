@@ -46,11 +46,13 @@ const Portfolio = () => {
   );
 
   return (
-    <div className="App">
+    <>
       <ParticlesComponent id="tsParticles" />
       <header className="header shadow-2xl shadow-purple-900 ">
         <nav className="nav-menus">
-          <h2 className="portfolio-heading">Portfolio</h2>
+          <a href="#home">
+            <h2 className="portfolio-heading">Portfolio</h2>
+          </a>
           <div className="menu-items-div">{renderMenus()}</div>
         </nav>
         <div className="mobile-header">
@@ -69,7 +71,9 @@ const Portfolio = () => {
           >
             <MenuItem sx={styles.menusBox}>{renderMenus()}</MenuItem>
           </Menu>
-          <h2 className="portfolio-heading">Portfolio</h2>
+          <a href="#home">
+            <h2 className="portfolio-heading">Portfolio</h2>
+          </a>
         </div>
       </header>
       <NameBanner id={"home"} />
@@ -77,7 +81,10 @@ const Portfolio = () => {
       <Experience id={"experience"} />
       <Projects id={"projects"} />
       <Contact id={"contact"} />
-    </div>
+      <footer className="footer">        
+          <div className="footer-menu-items">{renderMenus()}</div>               
+      </footer>
+    </>
   );
 };
 export default Portfolio;

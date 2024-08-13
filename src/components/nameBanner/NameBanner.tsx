@@ -9,8 +9,8 @@ interface Iprops {
 
 export default function NameBanner({ id }: Iprops) {
   return (
-    <div className="main-div">
-      <div className="heading-div" id={id}>
+    <div className="main-div" id={id}>
+      <div className="intro-div">
         <h1 className="name">
           Hi, I'm <br />
           Naga Prasanna Darapureddy
