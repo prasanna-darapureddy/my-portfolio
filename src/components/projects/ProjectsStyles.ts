@@ -1,3 +1,5 @@
+import { SxProps } from "@mui/material";
+
 export const styles = {
   projectBox: {
     display: "flex",
@@ -12,4 +14,27 @@ export const styles = {
     px: 3,
     fontSize: { xs: "30px", sm: "40px" },
   },
-};
+  projectCard: {
+    display: "flex",
+    alignItems: "center",
+    gap: 7,
+  },
+  projectDescription: {
+    display: "flex",
+    flexDirection: "column",
+    color: "#fff",
+    gap: 2,
+  },
+  descriptionText: {
+    textAlign: { xs: "center", sm: "left" },
+  },
+  imagesBox: {
+    width: { xs: "100%", sm: "50%", md: "35%" },
+    borderRadius: "30px",
+  },
+  image: {
+    borderRadius: "30px",
+    height: { xs: "300px" },
+    width: "100%",
+  },
+} satisfies Record<string, SxProps>;

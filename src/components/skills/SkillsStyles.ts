@@ -13,7 +13,7 @@ export const styles = {
     borderBottom: "5px solid #b339fa",
     py: 1,
     fontSize: { xs: "30px", sm: "40px" },
-    alignSelf: 'center'
+    alignSelf: "center",
   },
   cardsBox: {
     display: "flex",
@@ -27,8 +27,12 @@ export const styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    transition: "zoom 0.3s",
     gap: 1,
     p: 3,
+    "&:hover": {
+      boxShadow: "#b339fa50 0px 3px 8px 5px",
+    },
   },
   skillsIcon: {
     borderRadius: "50px",

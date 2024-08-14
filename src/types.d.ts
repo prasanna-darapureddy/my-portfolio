@@ -1,1 +1,1 @@
-// declare module "@headlessui/react";
+declare module 'react-slick'

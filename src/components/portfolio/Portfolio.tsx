@@ -47,43 +47,47 @@ const Portfolio = () => {
 
   return (
     <>
-      <ParticlesComponent id="tsParticles" />
-      <header className="header shadow-2xl shadow-purple-900 ">
-        <nav className="nav-menus">
-          <a href="#home">
-            <h2 className="portfolio-heading">Portfolio</h2>
-          </a>
-          <div className="menu-items-div">{renderMenus()}</div>
-        </nav>
-        <div className="mobile-header">
-          <button onClick={handleClick} className="menu-btn">
-            <MdMenu className="menu-icon" />
-          </button>
+      <div className="app">
+        <ParticlesComponent id="tsParticles" />
+        <header className="header shadow-2xl shadow-purple-900 ">
+          <nav className="nav-menus">
+            <a href="#home">
+              <h2 className="portfolio-heading">Portfolio</h2>
+            </a>
+            <div className="menu-items-div">{renderMenus()}</div>
+          </nav>
+          <div className="mobile-header">
+            <button onClick={handleClick} className="menu-btn">
+              <MdMenu className="menu-icon" />
+            </button>
 
-          <Menu
-            id="basic-menu"
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "basic-button",
-            }}
-          >
-            <MenuItem sx={styles.menusBox}>{renderMenus()}</MenuItem>
-          </Menu>
-          <a href="#home">
-            <h2 className="portfolio-heading">Portfolio</h2>
-          </a>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
+              }}
+            >
+              <MenuItem sx={styles.menusBox}>{renderMenus()}</MenuItem>
+            </Menu>
+            <a href="#home">
+              <h2 className="portfolio-heading">Portfolio</h2>
+            </a>
+          </div>
+        </header>
+        <div>
+          <NameBanner id={"home"} />
+          <Skills id={"skills"} />
+          <Experience id={"experience"} />
+          <Projects id={"projects"} />
+          <Contact id={"contact"} />
         </div>
-      </header>
-      <NameBanner id={"home"} />
-      <Skills id={"skills"} />
-      <Experience id={"experience"} />
-      <Projects id={"projects"} />
-      <Contact id={"contact"} />
-      <footer className="footer">        
-          <div className="footer-menu-items">{renderMenus()}</div>               
-      </footer>
+        <footer className="footer">
+          <div className="footer-menu-items">{renderMenus()}</div>
+        </footer>
+      </div>
     </>
   );
 };

@@ -3,6 +3,7 @@
   padding: 0px 50px;
   display:flex;
   align-items: center;
+  height: 100dvh;
 }
 .intro-div{
     display: flex;
@@ -44,7 +45,8 @@
     padding: 5px 15px;
   }
   .hero-cta:hover{
-    background-color: #b339fa30;
+    background-color: #b339fa50;
+    color: #fff;
   }
   .myPic{
     border-radius: 50%;
@@ -67,6 +69,14 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: 0.3s;
+  }
+  .icon-div:hover{
+    background-color: #b339fa70;
+    border:2px solid #b339fa;
+    border-radius: 50px;
+    color:#fff;
+    padding-bottom: 10px;
   }
   /* extra small */
   @media screen and (max-width: 600px) {
