@@ -33,18 +33,16 @@ const Portfolio = () => {
 
   const renderMenus = () => (
     <>
-      <nav className="nav-menus">
-        {navigation.map((item) => (
-          <a
-            key={item.id}
-            href={item.href}
-            onClick={handleClose}
-            className={item.name === "Home" ? "active" : ""}
-          >
-            {item.name}
-          </a>
-        ))}
-      </nav>
+      {navigation.map((item) => (
+        <a
+          key={item.id}
+          href={item.href}
+          onClick={handleClose}
+          className={item.name === "Home" ? "active" : ""}
+        >
+          {item.name}
+        </a>
+      ))}
     </>
   );
 
@@ -52,31 +50,30 @@ const Portfolio = () => {
     <>
       <div className="app">
         <ParticlesComponent id="tsParticles" />
-        <header className="header shadow-2xl shadow-purple-900 ">
+        <div className="mobile-header shadow-2xl shadow-purple-900">
+          <button onClick={handleClick} className="menu-btn">
+            <MdMenu className="menu-icon" />
+          </button>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              "aria-labelledby": "basic-button",
+            }}
+          >
+            <MenuItem sx={styles.menusBox}>{renderMenus()}</MenuItem>
+          </Menu>
           <a href="#home">
             <h2 className="portfolio-heading">Portfolio</h2>
           </a>
-          {renderMenus()}
-          <div className="mobile-header">
-            <button onClick={handleClick} className="menu-btn">
-              <MdMenu className="menu-icon" />
-            </button>
-
-            <Menu
-              id="basic-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
-              }}
-            >
-              <MenuItem sx={styles.menusBox}>{renderMenus()}</MenuItem>
-            </Menu>
-            <a href="#home">
-              <h2 className="portfolio-heading">Portfolio</h2>
-            </a>
-          </div>
+        </div>
+        <header className="header shadow-2xl shadow-purple-900 ">
+          <a href="#home" className="web-portfolio-heading">
+            <h2 className="portfolio-heading">Portfolio</h2>
+          </a>
+          <nav className="nav-menus">{renderMenus()}</nav>
         </header>
         <Stack direction={"column"} gap={3}>
           <NameBanner id={"home"} />

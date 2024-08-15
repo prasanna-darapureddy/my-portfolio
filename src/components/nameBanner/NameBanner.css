@@ -4,7 +4,8 @@
   display:flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  margin-top: 3%;
 }
 .intro-div{
     display: flex;
@@ -90,6 +91,7 @@
       text-align: center;
       gap:20px;
       height: 100%;
+      margin-top: 20%;
     }
     .intro-div{
       justify-content: center;
@@ -117,6 +119,7 @@
       text-align: center;
      gap:20px;
      height: 100%;
+     margin-top: 20%;
     }
     .intro-div{
       justify-content: center;
@@ -145,6 +148,7 @@
       text-align: center;
        gap:20px;
        height: 100%;
+       margin-top: 20%;
     }
     .intro-div{
       justify-content: center;

@@ -5,6 +5,9 @@ export const styles = {
     display: "flex",
     flexDirection: "column",
     backgroundColor: "black",
+    color:'white',
+    alignItems:'flex-start',
+    justifyContent:'flex-start',
     gap: 3,
   },
   socialIcons: {

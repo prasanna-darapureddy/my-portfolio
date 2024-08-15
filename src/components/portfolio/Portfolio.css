@@ -45,6 +45,7 @@
 .mobile-header{
   display: none;
 }
+
 .portfolio-heading{
   font-style:  italic;
   font-size: 25px;
@@ -69,6 +70,12 @@
   gap:15px
 }
 @media screen and (max-width: 600px) {
+  .header{
+    display: none;
+  }
+  .web-portfolio-heading{
+    display:none
+  }
  .nav-menus{
   display: none;
  }
@@ -79,10 +86,20 @@
   color:#fff;
  }
  .mobile-header{
-  padding: 12px;
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  background: rgba(0, 0, 0, 0.7); 
+  backdrop-filter: blur(5px); 
+  z-index: 1000;
+  font-family: 'Poppins';
   display: flex;
   justify-content: space-between;
-  color:#fff
+  align-items: center;
+  padding: 12px;
+  color: #fff;
+  font-weight: 600;
 }
  .menu-icon{
   font-size: 25px;
