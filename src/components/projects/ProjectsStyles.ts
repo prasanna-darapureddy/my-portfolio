@@ -32,9 +32,7 @@ export const styles = {
     color: "#fff",
     gap: 2,
   },
-  descriptionText: {
-    textAlign: { xs: "center", sm: "left" },
-  },
+  descriptionText: {},
   imagesBox: {
     width: { xs: "100%", sm: "50%", md: "35%" },
     borderRadius: "30px",

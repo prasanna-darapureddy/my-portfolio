@@ -50,9 +50,9 @@ export default function Projects({ id }: Iprops) {
       <Typography variant={"h3"} sx={styles.heading}>
         Projects
       </Typography>
-      <Stack direction="column" gap={5} px={'50px'}>
-        {projectsList.map((project) => (
-          <ProjectsCard key={project.id} eachProject={project} />
+      <Stack direction="column" gap={5}>
+        {projectsList.map((project, index) => (
+          <ProjectsCard key={index+'pro'} eachProject={project} />
         ))}
       </Stack>
     </Box>

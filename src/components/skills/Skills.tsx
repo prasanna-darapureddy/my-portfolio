@@ -91,9 +91,12 @@ export default function Skills({ id }: Iprops) {
           My Skills
         </Typography>
         <Grid container spacing={2}>
-          {skillsData.map((eachSkill) => (
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <SkillCard key={eachSkill.id} eachSkillDetails={eachSkill} />
+          {skillsData.map((eachSkill, index) => (
+            <Grid item xs={12} sm={6} md={4} lg={3} key={index + "skills"}>
+              <SkillCard
+                key={eachSkill.id + "skl"}
+                eachSkillDetails={eachSkill}
+              />
             </Grid>
           ))}
         </Grid>

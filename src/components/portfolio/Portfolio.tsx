@@ -33,16 +33,18 @@ const Portfolio = () => {
 
   const renderMenus = () => (
     <>
-      {navigation.map((item) => (
-        <a
-          key={item.id}
-          href={item.href}
-          onClick={handleClose}
-          className="text-md font-semibold leading-6 text-white cursor-pointer hover:text-purple-600 scroll-smooth"
-        >
-          {item.name}
-        </a>
-      ))}
+      <nav className="nav-menus">
+        {navigation.map((item) => (
+          <a
+            key={item.id}
+            href={item.href}
+            onClick={handleClose}
+            className={item.name === "Home" ? "active" : ""}
+          >
+            {item.name}
+          </a>
+        ))}
+      </nav>
     </>
   );
 
@@ -51,12 +53,10 @@ const Portfolio = () => {
       <div className="app">
         <ParticlesComponent id="tsParticles" />
         <header className="header shadow-2xl shadow-purple-900 ">
-          <nav className="nav-menus">
-            <a href="#home">
-              <h2 className="portfolio-heading">Portfolio</h2>
-            </a>
-            <div className="menu-items-div">{renderMenus()}</div>
-          </nav>
+          <a href="#home">
+            <h2 className="portfolio-heading">Portfolio</h2>
+          </a>
+          {renderMenus()}
           <div className="mobile-header">
             <button onClick={handleClick} className="menu-btn">
               <MdMenu className="menu-icon" />
