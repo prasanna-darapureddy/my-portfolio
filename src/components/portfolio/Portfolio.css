@@ -43,6 +43,12 @@
  height: 100px;
  padding: 15px;
  background: rgba(0, 0, 0);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+ box-shadow: 8px 5px #b339fa, 0px -5px 5px #b339fa
 }
 .footer-menu-items{
   display: flex;

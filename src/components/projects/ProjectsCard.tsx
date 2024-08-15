@@ -61,7 +61,7 @@ export default function ProjectsCard({ eachProject }: IProps) {
       </Box>
 
       <Box sx={styles.projectDescription}>
-        <Typography variant="h5">{projectTitle}</Typography>
+        <Typography variant="h5" sx={styles.projectTitle}>{projectTitle}</Typography>
         <Stack direction={'column'} gap={1}>
           <Typography sx={styles.descriptionText}>{description}</Typography>
           <Typography sx={styles.descriptionText}>

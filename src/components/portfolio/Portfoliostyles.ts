@@ -10,4 +10,21 @@ export const styles = {
   socialIcons: {
     fontSize: 28,
   },
+  dialogTitle: {
+    fontWeight: 600,
+    color: "#b339fa",
+  },
+  dialogContent: {
+    fontWeight: 600,
+    fontFamily:"Poppins",
+    color: "#000",
+    display:'flex',
+    flexDirection:'column',
+    gap:2,
+  },
+  button: {
+    textTransform: "capitalize",
+    color: "#b339fa",
+    fontWeight: 600,
+  },
 } satisfies Record<string, SxProps>;

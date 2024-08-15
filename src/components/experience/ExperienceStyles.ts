@@ -4,9 +4,11 @@ export const styles = {
   experienceBox: {
     display: "flex",
     flexDirection: "column",
+    justifyContent: "center",
     p: { xs: "10px 30px", sm: "10px 50px" },
     color: "#fff",
-    gap: 3,
+    gap: 15,
+    minHeight: "100vh",
   },
   heading: {
     fontFamily: "Poppins",

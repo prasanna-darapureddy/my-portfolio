@@ -7,6 +7,7 @@ export const styles = {
     p: { xs: "10px 30px", sm: "10px 50px" },
     color: "#fff",
     gap: 3,
+    minHeight: "100vh",
   },
   heading: {
     fontFamily: "Poppins",

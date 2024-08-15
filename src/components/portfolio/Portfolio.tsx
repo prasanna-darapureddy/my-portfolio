@@ -1,10 +1,11 @@
-import { Menu, MenuItem } from "@mui/material";
+import { Menu, MenuItem, Stack } from "@mui/material";
 import React, { useState } from "react";
 import { MdMenu } from "react-icons/md";
 import ParticlesComponent from "../../Particles";
 import Contact from "../contact/Contact";
 import Experience from "../experience/Experience";
 import NameBanner from "../nameBanner/NameBanner";
+import SocialLinks from "../nameBanner/SocialLinks";
 import Projects from "../projects/Projects";
 import Skills from "../skills/Skills";
 import "./Portfolio.css";
@@ -77,15 +78,16 @@ const Portfolio = () => {
             </a>
           </div>
         </header>
-        <div>
+        <Stack direction={"column"} gap={3}>
           <NameBanner id={"home"} />
           <Skills id={"skills"} />
           <Experience id={"experience"} />
           <Projects id={"projects"} />
           <Contact id={"contact"} />
-        </div>
+        </Stack>
         <footer className="footer">
           <div className="footer-menu-items">{renderMenus()}</div>
+          <SocialLinks />
         </footer>
       </div>
     </>

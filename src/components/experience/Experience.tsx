@@ -93,7 +93,7 @@ export default function Experience({ id }: Iprops) {
         Experience
       </Typography>
 
-      <Stack  spacing={4} mt={5}>
+      <Stack spacing={4} alignSelf={"center"}>
         <Stepper
           alternativeLabel
           activeStep={1}

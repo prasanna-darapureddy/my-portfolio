@@ -1,7 +1,6 @@
-import { EmailOutlined, GitHub, LinkedIn } from "@mui/icons-material";
 import { myPic, resume } from "../../assets/index";
-import { styles } from "../portfolio/Portfoliostyles";
 import "./NameBanner.css";
+import SocialLinks from "./SocialLinks";
 
 interface Iprops {
   id: string;
@@ -24,36 +23,7 @@ export default function NameBanner({ id }: Iprops) {
             TypeScript, and modern web technologies. Let’s work together to
             create something amazing!
           </p>
-          <div className="social-div">
-            <a
-              href="https://github.com/prasanna-darapureddy"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="icon-div">
-                <GitHub sx={styles.socialIcons} />
-              </div>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/prasanna-darapureddy"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="icon-div">
-                <LinkedIn sx={styles.socialIcons} />
-              </div>
-            </a>
-
-            <a
-              href="mailto:nagaprasanna18@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="icon-div">
-                <EmailOutlined sx={styles.socialIcons} />
-              </div>
-            </a>
-          </div>
+          <SocialLinks />
           <a href={resume} className="hero-cta" download={resume}>
             Resume
           </a>

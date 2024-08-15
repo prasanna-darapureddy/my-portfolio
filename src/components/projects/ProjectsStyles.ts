@@ -7,6 +7,7 @@ export const styles = {
     p: { xs: "10px 30px", sm: "10px 50px" },
     color: "#fff",
     gap: 3,
+    minHeight: "100vh",
   },
   heading: {
     fontFamily: "Poppins",
@@ -17,9 +18,15 @@ export const styles = {
   projectCard: {
     display: "flex",
     alignItems: "center",
+    justifyContent: "center",
     gap: 7,
   },
+  projectTitle: {
+    color: "#b339fa",
+    fontWeight: 600,
+  },
   projectDescription: {
+    fontFamily: "Poppins",
     display: "flex",
     flexDirection: "column",
     color: "#fff",
