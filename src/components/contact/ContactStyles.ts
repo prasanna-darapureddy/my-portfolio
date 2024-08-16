@@ -12,7 +12,6 @@ export const styles = {
   },
   heading: {
     fontFamily: "Poppins",
-    borderBottom: "5px solid #b339fa",
     py: 1,
     fontSize: { xs: "30px", sm: "40px" },
     alignSelf: "flex-start",
