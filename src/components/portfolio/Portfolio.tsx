@@ -31,14 +31,26 @@ const Portfolio = () => {
     setAnchorEl(null);
   };
 
+  const handleMenuClick = (event: any) => {
+    let active = document.querySelector(".menu.active");
+    if (active) active.classList.remove("active");
+    if (event.target.classList.contains("menu")) {
+      event.target.classList.add("active");
+      window.location.href = `#${event.target.id}`;
+    }
+    handleClose();
+  };
+
+
   const renderMenus = () => (
     <>
       {navigation.map((item) => (
         <a
           key={item.id}
           href={item.href}
-          onClick={handleClose}
-          className={item.name === "Home" ? "active" : ""}
+          onClick={handleMenuClick}
+          id={`${item}1`}
+          className={item.name === "Home" ? "active menu" : "menu"}
         >
           {item.name}
         </a>
