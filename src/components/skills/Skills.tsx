@@ -63,7 +63,7 @@ const skillsData = [
   {
     id: 7,
     logo: mui,
-    skill: "MUI",
+    skill: "MUI(Material UI)",
     description:
       "Experienced in building modern, responsive UIs with Material-UI. Proficient in utilizing pre-built components, theming, and customization to create consistent and visually appealing interfaces.",
   },
