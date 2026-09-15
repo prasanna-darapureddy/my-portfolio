@@ -1,9 +1,9 @@
-import { Box, Stack, Typography } from "@mui/material";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
-import { projectsDummy } from "../../assets";
-import { styles } from "./ProjectsStyles";
+import { Box, Stack, Typography } from '@mui/material';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+import { projectsDummy } from '../../assets';
+import { styles } from './ProjectsStyles';
 
 type Project = {
   id: number;
@@ -19,8 +19,7 @@ interface IProps {
 }
 
 export default function ProjectsCard({ eachProject }: IProps) {
-  const { id, images, projectTitle, description, technologies, teamSize } =
-    eachProject as Project;
+  const { id, images, projectTitle, description, technologies, teamSize } = eachProject as Project;
   const settings = {
     dots: false,
     infinite: images.length > 0 ? true : false,
@@ -30,15 +29,13 @@ export default function ProjectsCard({ eachProject }: IProps) {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    dotsClass: "slick-dots slick-thumb",
+    dotsClass: 'slick-dots slick-thumb',
   };
   return (
     <Box
       sx={styles.projectCard}
       flexDirection={
-        id === 1
-          ? { xs: "column", sm: "row-reverse" }
-          : { xs: "column", sm: "row" }
+        id % 2 !== 0 ? { xs: 'column', sm: 'row-reverse' } : { xs: 'column', sm: 'row' }
       }
     >
       <Box sx={styles.imagesBox}>
@@ -46,14 +43,12 @@ export default function ProjectsCard({ eachProject }: IProps) {
           {images.map((imageUrl, index) => (
             <Box key={index}>
               <Box
-                component={"img"}
+                component={'img'}
                 alt="Screen"
                 src={imageUrl}
                 sx={styles.image}
                 loading="lazy"
-                onError={(event) =>
-                  (event.currentTarget.src = `${projectsDummy}`)
-                }
+                onError={(event) => (event.currentTarget.src = `${projectsDummy}`)}
               />
             </Box>
           ))}
@@ -61,15 +56,15 @@ export default function ProjectsCard({ eachProject }: IProps) {
       </Box>
 
       <Box sx={styles.projectDescription}>
-        <Typography variant="h5" sx={styles.projectTitle}>{projectTitle}</Typography>
+        <Typography variant="h5" sx={styles.projectTitle}>
+          {projectTitle}
+        </Typography>
         <Stack direction={'column'} gap={1}>
           <Typography sx={styles.descriptionText}>{description}</Typography>
-          <Typography sx={styles.descriptionText}>
-            Technologies Used: {technologies.join(", ")}
+          <Typography sx={styles.technologies}>
+            Technologies Used: {technologies.join(', ')}
           </Typography>
-          <Typography sx={styles.descriptionText}>
-            Team Size: {teamSize}
-          </Typography>
+          <Typography sx={styles.descriptionText}>Team Size: {teamSize}</Typography>
         </Stack>
       </Box>
     </Box>

@@ -25,7 +25,7 @@ const SkillCard = ({ eachSkillDetails }: IProps) => {
       <Typography sx={styles.skillDescription} title={description}>
         {description.length < 100
           ? description
-          : `${description.slice(0, 80)}...`}
+          : `${description.slice(0, 100)}...`}
       </Typography>
     </Box>
   );
