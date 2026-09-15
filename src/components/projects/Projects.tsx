@@ -16,6 +16,7 @@ import {
   CASm,
   CATrainings,
   CAXPosts,
+  festiveNetHrs,
   festiveNetLogin,
   hoardingbookingDetails,
   hoardingDashboard,
@@ -63,7 +64,7 @@ const projectsList = [
   },
   {
     id: 2,
-    images: [festiveNetLogin],
+    images: [festiveNetLogin, festiveNetHrs],
     projectTitle: 'Festivnet',
     description:
       'Festivnet is an event management and celebration platform designed to help users discover, organize, and manage festive and special events through an engaging and responsive web experience. Worked as a Frontend Developer, developing responsive and user-friendly interfaces using React.js. Implemented event listing and detail pages, reusable UI components, API integrations, responsive layouts, form handling, and interactive features. Collaborated with the team to deliver new features, fix UI issues, and improve the overall usability and performance of the application.',

@@ -38,3 +38,4 @@ export const NextJs = require('./nextjs.png');
 export const shadcn = require('./shadcn.png');
 export const tailwind = require('./tailwind.png');
 export const festiveNetLogin = require('./FestivNetLogin.png');
+export const festiveNetHrs = require('./FestivHrs.png');

@@ -22,7 +22,7 @@ export default function ProjectsCard({ eachProject }: IProps) {
   const { id, images, projectTitle, description, technologies, teamSize } = eachProject as Project;
   const settings = {
     dots: false,
-    infinite: images.length > 0 ? true : false,
+    infinite: images.length > 1 ? true : false,
     speed: 500,
     arrows: false,
     slidesToShow: 1,
